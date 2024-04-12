@@ -41,6 +41,17 @@
         @enderror 
         <br>
         <label>
+            Slug:
+            <br>
+            <input type="text" name="slug" value="{{old('slug')}}">
+        </label>
+        @error('slug')
+            <br>
+                <span>*{{$message}}</span>
+            <br>
+        @enderror
+        <label>
+        <br>
             Fecha de Nacimiento:
             <br>
             <input type="date" name="fecha_nacimiento" value="{{old('fecha_nacimiento')}}">

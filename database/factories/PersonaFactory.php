@@ -20,6 +20,7 @@ class PersonaFactory extends Factory
             'nombre'=>$this->faker->sentence(),
             'apellido_paterno'=>$this->faker->sentence(),
             'apellido_materno'=>$this->faker->sentence(),
+            'slug'=>$this->faker->slug(),
             'fecha_nacimiento'=>$this->faker->date(),
             'direccion'=>$this->faker->sentence(),
             'usuario'=>$this->faker->sentence(),

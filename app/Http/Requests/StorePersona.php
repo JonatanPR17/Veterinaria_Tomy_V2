@@ -25,6 +25,7 @@ class StorePersona extends FormRequest
             'nombre' => 'required',
             'apellido_paterno' => 'required',
             'apellido_materno' => 'required',
+            'slug' => 'required|unique:personas',
             'fecha_nacimiento' => 'required',
             'direccion' => 'required',
             'usuario' => 'required',

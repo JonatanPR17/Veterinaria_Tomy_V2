@@ -7,4 +7,10 @@
     <br>
     <a href="{{route('personas.edit', $persona)}}">Editar Formulario</a>
     <p><strong>Apellido Paterno: </strong>{{$persona->apellido_paterno}}</p>
+
+    <form action="{{route('personas.destroy', $persona)}}" method="POST">
+        @csrf
+        @method('delete')
+        <button type="submit">Eliminar</button>
+    </form>
 @endsection

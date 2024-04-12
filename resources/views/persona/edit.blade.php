@@ -40,7 +40,18 @@
         <br>
             <span>*{{$message}}</span>
         <br>
-        @enderror 
+        @enderror
+        <br>
+        <label>
+            Slug:
+            <br>
+            <input type="text" name="slug" value="{{old('slug', $persona->slug)}}">
+        </label>
+        @error('slug')
+            <br>
+                <span>*{{$message}}</span>
+            <br>
+        @enderror
         <br>
         <label>
             Fecha de Nacimiento:

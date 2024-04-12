@@ -19,13 +19,18 @@ use App\Http\Controllers\PersonaController;
     return view('welcome');
 });*/
 
-Route::get('/', HomeController::class);
+Route::get('/', HomeController::class)->name('home');
 
-Route::controller(PersonaController::class)->group(function () {
+/*Route::controller(PersonaController::class)->group(function () {
     Route::get('personas', 'index')->name('personas.index');
     Route::get('personas/create', 'create')->name('personas.create');
     Route::post('personas','store')->name('personas.store');
     Route::get('personas/{persona}','show')->name('personas.show');
     Route::get('personas/{persona}/edit','edit')->name('personas.edit');
     Route::put('personas/{persona}','update')->name('personas.update');
-});
+    Route::delete('personas,{persona}','destroy')->name('personas.destroy'); 
+});*/
+
+Route::resource('personas',PersonaController::class) /*->parameters(['clientes' => 'persona'])->names('personas')*/;
+
+Route::view('nosotros','nosotros')->name('nosotros');

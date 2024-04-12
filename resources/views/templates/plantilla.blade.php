@@ -7,8 +7,16 @@
     <title>@yield('titulo') </title>   
     <!---<script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{{ asset('ruta/a/tu/estilo.css') }}"-->
+    <style>
+        .active{
+            color: red;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
+    @include('templates.partials.header')
     @yield('contenido')
+    @include('templates.partials.footer')
 </body>
 </html>
